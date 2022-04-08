@@ -17,6 +17,11 @@
 class GameScene {
 
   public: // メンバ関数
+	Model* model_ = nullptr;
+	Sprite* sprite_ = nullptr;
+
+	WorldTransform worldTransform_;
+	ViewProjection viewProjection_;
 	/// <summary>
 	/// コンストクラタ
 	/// </summary>
@@ -47,6 +52,12 @@ class GameScene {
 	Input* input_ = nullptr;
 	Audio* audio_ = nullptr;
 	DebugText* debugText_ = nullptr;
+
+	uint32_t textureHandle_ = 0;
+	uint32_t soundDataHandle_ = 0;
+	uint32_t voiceHandle_ = 0;
+
+	int32_t value_ = 0;
 
 	/// <summary>
 	/// ゲームシーン用
